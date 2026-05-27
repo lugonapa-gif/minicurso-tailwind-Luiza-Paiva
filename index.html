@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing construída incrementalmente no minicurso Tailwind.">
+
+    <title>Landing · Minicurso Tailwind Luiza-paiva</title>
+
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    brand: {
+                        400: '#ff4d4d',
+                        500: '#e50914',
+                        600: '#b20710',
+                    },
+
+                    dark: '#141414',
+                },
+
+                fontFamily: {
+                    sans: ['Urbanist', 'system-ui', 'sans-serif'],
+                },
+            },
+        },
+    };
+    </script>
+</head>
+
+<body class="min-h-screen bg-black font-sans text-white antialiased">
+
+    <header class="border-b border-zinc-900 bg-black/90 backdrop-blur">
+
+        <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+
+            <a href="#" class="text-lg font-bold tracking-tight text-white">
+                Movie<span class="text-brand-500">Lab</span>
+            </a>
+
+            <nav class="hidden items-center gap-6 md:flex" aria-label="Principal">
+
+                <a href="#features"
+                   class="rounded-md px-1 text-sm font-medium text-zinc-400 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+                   Catálogo
+                </a>
+
+                <a href="#cta"
+                   class="rounded-md px-1 text-sm font-medium text-zinc-400 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+                   Lançamentos
+                </a>
+
+                <a href="#footer"
+                   class="rounded-md px-1 text-sm font-medium text-zinc-400 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+                   Minha Lista
+                </a>
+
+            </nav>
+
+            <details class="relative md:hidden">
+
+                <summary class="inline-flex cursor-pointer list-none items-center justify-center rounded-lg border border-zinc-700 p-2 text-brand-500 [&::-webkit-details-marker]:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+
+                    <i class="fa-solid fa-bars shrink-0 text-xl leading-none" aria-hidden="true"></i>
+
+                    <span class="sr-only">Abrir ou fechar menu</span>
+
+                </summary>
+
+                <nav class="absolute right-0 top-[calc(100%+0.5rem)] z-50 min-w-[12rem] rounded-xl border border-zinc-800 bg-black py-2 shadow-xl shadow-black/50 ring-1 ring-white/5"
+                     aria-label="Principal (mobile)">
+
+                    <a href="#features"
+                       class="block px-4 py-2.5 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white focus-visible:bg-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-500">
+                       Catálogo
+                    </a>
+
+                    <a href="#cta"
+                       class="block px-4 py-2.5 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white focus-visible:bg-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-500">
+                       Lançamentos
+                    </a>
+
+                    <a href="#footer"
+                       class="block px-4 py-2.5 text-sm font-medium text-zinc-300 transition hover:bg-zinc-900 hover:text-white focus-visible:bg-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-500">
+                       Minha Lista
+                    </a>
+
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="border-b border-zinc-900 bg-gradient-to-b from-black to-zinc-950 py-20 sm:py-24">
+
+            <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
+
+                <div class="text-center lg:text-left">
+
+                    <p class="text-sm font-semibold uppercase tracking-widest text-brand-500">
+                        Entretenimento sem limites
+                    </p>
+
+                    <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+                        Os maiores sucessos do cinema e streaming reunidos para você.
+                    </h1>
+
+                    <p class="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
+                        Explore lançamentos, séries populares e conteúdos exclusivos em uma experiência moderna e imersiva.
+                    </p>
+
+                    <div class="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
+
+                        <a href="#cta"
+                           class="inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand-500/25 transition hover:bg-brand-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black">
+
+                           Assistir agora
+                        </a>
+
+                        <a href="../modulo-1-intro-setup.html"
+                           class="inline-flex items-center justify-center rounded-full border border-zinc-700 px-8 py-3.5 text-base font-semibold text-zinc-200 transition hover:border-zinc-500 hover:bg-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black">
+
+                           Explorar catálogo
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="overflow-hidden rounded-2xl border border-zinc-800 shadow-2xl shadow-black/50">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1670942298778-f339cac1fe01?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGFzc2lzdG8lMjBuZXRmbGl4fGVufDB8fDB8fHww"
+                        alt="Pessoa assistindo Netflix"
+                        width="900"
+                        height="600"
+                        class="aspect-video h-full w-full object-cover">
+
+                </div>
+            </div>
+        </section>
+
+        <section class="border-b border-zinc-900 bg-black py-12" aria-label="Clientes">
+
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+                <p class="mb-8 text-center text-xs font-semibold uppercase tracking-widest text-zinc-500">
+                    Inspirado nas principais plataformas de streaming
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 opacity-60 grayscale">
+
+                    <span class="text-lg font-bold text-zinc-400">CinemaOne</span>
+
+                    <span class="text-lg font-bold text-zinc-400">PlayStream</span>
+
+                    <span class="text-lg font-bold text-zinc-400">VisionPlus</span>
+
+                    <span class="text-lg font-bold text-zinc-400">MovieBox</span>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="border-b border-zinc-900 bg-zinc-950 py-20 sm:py-24">
+
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+                <div class="mx-auto max-w-2xl text-center">
+
+                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                        Recursos da plataforma
+                    </h2>
+
+                    <p class="mt-4 text-lg text-zinc-400">
+                        Interface construída com foco em navegação moderna, responsividade e destaque visual para conteúdos.
+                    </p>
+                </div>
+
+                <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+                    <article class="group rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 transition hover:-translate-y-1 hover:border-zinc-600 hover:shadow-xl hover:shadow-brand-500/10">
+
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/15 text-brand-400">
+                            <i class="fa-solid fa-film text-xl" aria-hidden="true"></i>
+                        </div>
+
+                        <h3 class="mt-4 text-lg font-semibold text-white">
+                            Streaming rápido
+                        </h3>
+
+                        <p class="mt-2 text-zinc-400">
+                            Carregamento rápido e navegação fluida para assistir sem interrupções.
+                        </p>
+
+                    </article>
+
+                    <article class="group rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 transition hover:-translate-y-1 hover:border-zinc-600 hover:shadow-xl hover:shadow-brand-500/10">
+
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/15 text-brand-400">
+                            <i class="fa-solid fa-tv text-xl" aria-hidden="true"></i>
+                        </div>
+
+                        <h3 class="mt-4 text-lg font-semibold text-white">
+                            Experiência responsiva
+                        </h3>
+
+                        <p class="mt-2 text-zinc-400">
+                            Acesse seus conteúdos favoritos em qualquer dispositivo.
+                        </p>
+
+                    </article>
+
+                    <article class="group rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 transition hover:-translate-y-1 hover:border-zinc-600 hover:shadow-xl hover:shadow-brand-500/10 sm:col-span-2 lg:col-span-1">
+
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/15 text-brand-400">
+                            <i class="fa-solid fa-clapperboard text-xl" aria-hidden="true"></i>
+                        </div>
+
+                        <h3 class="mt-4 text-lg font-semibold text-white">
+                            Visual cinematográfico
+                        </h3>
+
+                        <p class="mt-2 text-zinc-400">
+                            Visual moderno pensado para destacar filmes, séries e trailers em alta qualidade.
+                        </p>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="py-20 sm:py-24">
+
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+                <div class="overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 to-red-900 p-8 shadow-2xl sm:p-12 md:p-14">
+
+                    <div class="mx-auto max-w-2xl text-center">
+
+                        <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                            Fique por dentro dos próximos lançamentos
+                        </h2>
+
+                        <p class="mt-4 text-lg text-red-100/90">
+                            Receba recomendações personalizadas e novidades direto no seu email.
+                        </p>
+
+                    </div>
+
+                    <form class="mx-auto mt-10 flex max-w-md flex-col gap-3 sm:mx-auto sm:flex-row sm:items-end"
+                          action="#"
+                          method="post">
+
+                        <div class="flex-1 text-left">
+
+                            <label for="email"
+                                   class="mb-1 block text-sm font-medium text-red-50">
+                                   Email
+                            </label>
+
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                autocomplete="email"
+                                placeholder="seuemail@exemplo.com"
+                                class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-red-200/50 focus:border-white focus:outline-none focus:ring-2 focus:ring-white/40">
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="rounded-xl bg-black px-8 py-3 font-semibold text-white transition hover:bg-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:shrink-0">
+
+                            Quero acessar
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="border-t border-zinc-900 bg-black py-12">
+
+        <div class="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-4 lg:px-8">
+
+            <div class="md:col-span-2">
+
+                <p class="text-lg font-bold text-white">
+                    Movie<span class="text-brand-500">Lab</span>
+                </p>
+
+                <p class="mt-3 max-w-sm text-sm text-zinc-500">
+                    Plataforma fictícia criada para demonstrar uma experiência moderna de streaming.
+                </p>
+            </div>
+
+            <div>
+
+                <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500">
+                    Categorias
+                </p>
+
+                <ul class="mt-4 space-y-2 text-sm text-zinc-400">
+
+                    <li>
+                        <a href="../modulo-1-intro-setup.html"
+                           class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">
+                           Filmes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../modulo-2-layout-responsivo.html"
+                           class="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">
+                           Séries
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../modulo-3-componentes-estados.html"
+                           class="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">
+                           Documentários
+                        </a>
+                    </li>
+
+                </ul>
+
+                <p class="mt-6 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+                    Projeto
+                </p>
+
+                <ul class="mt-4 space-y-2 text-sm text-zinc-400">
+
+                    <li>
+                        <a href="../preview/apos-modulo-1.html"
+                           class="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">
+                           Versão Inicial
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../preview/apos-modulo-2.html"
+                           class="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">
+                           Versão Responsiva
+                        </a>
+                    </li>
+
+                    <li>
+                        <span class="text-zinc-500">
+                            Versão Final
+                        </span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div>
+
+                <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500">
+                    Base
+                </p>
+
+                <ul class="mt-4 space-y-2 text-sm text-zinc-400">
+
+                    <li>
+                        <a href="https://gabriell-braga.github.io/Minicursos-Modulo-1---HTML-CSS-JS/index.html#slide-1"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">
+
+                           Curso HTML
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <p class="mx-auto mt-12 max-w-6xl px-4 text-center text-xs text-zinc-600 sm:px-6 lg:px-8">
+            © 2026 MovieLab • Projeto educacional desenvolvido com Tailwind CSS.
+        </p>
+
+    </footer>
+
+</body>
+</html>
